@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/aws/aws-sdk-go/service/kms"
-	"github.com/nsmithuk/local-kms/src/cmk"
-	"github.com/nsmithuk/local-kms/src/service"
+	"github.com/mnPanicMeli/local-kms/src/cmk"
+	"github.com/mnPanicMeli/local-kms/src/service"
 )
 
 type ParametersForImportResponse struct {

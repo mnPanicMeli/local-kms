@@ -2,13 +2,14 @@ package src
 
 import (
 	"fmt"
-	"github.com/nsmithuk/local-kms/src/config"
-	"github.com/nsmithuk/local-kms/src/data"
-	"github.com/nsmithuk/local-kms/src/handler"
-	log "github.com/sirupsen/logrus"
 	"net/http"
 	"reflect"
 	"strings"
+
+	"github.com/mnPanicMeli/local-kms/src/config"
+	"github.com/mnPanicMeli/local-kms/src/data"
+	"github.com/mnPanicMeli/local-kms/src/handler"
+	log "github.com/sirupsen/logrus"
 )
 
 func Run(port, seedPath string) {

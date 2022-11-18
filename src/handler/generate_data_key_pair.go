@@ -9,8 +9,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/kms"
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/nsmithuk/local-kms/src/cmk"
-	"github.com/nsmithuk/local-kms/src/x509"
+	"github.com/mnPanicMeli/local-kms/src/cmk"
+	"github.com/mnPanicMeli/local-kms/src/x509"
 )
 
 type GenerateDataKeyPairResponse struct {

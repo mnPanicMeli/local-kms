@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/aws/aws-sdk-go/service/kms"
-	"github.com/nsmithuk/local-kms/src/cmk"
+	"github.com/mnPanicMeli/local-kms/src/cmk"
 )
 
 func (r *RequestHandler) UntagResource() Response {

@@ -1,15 +1,16 @@
 package main
 
 import (
-	"github.com/nsmithuk/local-kms/src"
-	"github.com/nsmithuk/local-kms/src/config"
-	log "github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"
+
+	"github.com/mnPanicMeli/local-kms/src"
+	"github.com/mnPanicMeli/local-kms/src/config"
+	log "github.com/sirupsen/logrus"
 )
 
 var (
-	Version string
+	Version   string
 	GitCommit string
 )
 

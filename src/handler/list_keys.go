@@ -2,9 +2,10 @@ package handler
 
 import (
 	"fmt"
+
 	"github.com/aws/aws-sdk-go/service/kms"
-	"github.com/nsmithuk/local-kms/src/config"
-	"github.com/nsmithuk/local-kms/src/data"
+	"github.com/mnPanicMeli/local-kms/src/config"
+	"github.com/mnPanicMeli/local-kms/src/data"
 )
 
 func (r *RequestHandler) ListKeys() Response {

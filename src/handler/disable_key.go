@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/aws/aws-sdk-go/service/kms"
-	"github.com/nsmithuk/local-kms/src/cmk"
-	"github.com/nsmithuk/local-kms/src/config"
+	"github.com/mnPanicMeli/local-kms/src/cmk"
+	"github.com/mnPanicMeli/local-kms/src/config"
 )
 
 func (r *RequestHandler) DisableKey() Response {

@@ -2,8 +2,9 @@ package handler
 
 import (
 	"fmt"
+
 	"github.com/aws/aws-sdk-go/service/kms"
-	"github.com/nsmithuk/local-kms/src/service"
+	"github.com/mnPanicMeli/local-kms/src/service"
 )
 
 func (r *RequestHandler) GenerateRandom() Response {

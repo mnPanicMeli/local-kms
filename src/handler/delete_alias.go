@@ -2,9 +2,10 @@ package handler
 
 import (
 	"fmt"
-	"github.com/aws/aws-sdk-go/service/kms"
-	"github.com/nsmithuk/local-kms/src/config"
 	"strings"
+
+	"github.com/aws/aws-sdk-go/service/kms"
+	"github.com/mnPanicMeli/local-kms/src/config"
 )
 
 func (r *RequestHandler) DeleteAlias() Response {

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/nsmithuk/local-kms/src/data"
+	"github.com/mnPanicMeli/local-kms/src/data"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -26,7 +26,7 @@ func NewRequestHandler(r *http.Request, l *log.Logger, d *data.Database) *Reques
 }
 
 /*
-	Decodes the request's JSON body into the passed interface
+Decodes the request's JSON body into the passed interface
 */
 func (r *RequestHandler) decodeBodyInto(v interface{}) error {
 	decoder := json.NewDecoder(r.request.Body)

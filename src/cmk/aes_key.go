@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nsmithuk/local-kms/src/service"
+	"github.com/mnPanicMeli/local-kms/src/service"
 )
 
 type AesKey struct {
@@ -108,7 +108,7 @@ func (k *AesKey) RotateIfNeeded() bool {
 //-----------------------
 
 /*
-	Generates a new 32 bytes key from random data
+Generates a new 32 bytes key from random data
 */
 func generateKey() [32]byte {
 	var key [32]byte

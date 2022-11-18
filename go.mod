@@ -1,4 +1,4 @@
-module github.com/nsmithuk/local-kms
+module github.com/mnPanicMeli/local-kms
 
 go 1.17
 

@@ -6,9 +6,9 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/kms"
 	"github.com/gofrs/uuid"
-	"github.com/nsmithuk/local-kms/src/cmk"
-	"github.com/nsmithuk/local-kms/src/config"
-	"github.com/nsmithuk/local-kms/src/data"
+	"github.com/mnPanicMeli/local-kms/src/cmk"
+	"github.com/mnPanicMeli/local-kms/src/config"
+	"github.com/mnPanicMeli/local-kms/src/data"
 )
 
 func (r *RequestHandler) CreateKey() Response {

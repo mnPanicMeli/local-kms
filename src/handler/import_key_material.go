@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nsmithuk/local-kms/src/cmk"
+	"github.com/mnPanicMeli/local-kms/src/cmk"
 )
 
 // Using custom struct to be able to decode ValidTo
