@@ -109,7 +109,6 @@ workflows:
               ignore: /.*/
 
 jobs:
-
   darwin-amd64:
     docker:
       - image: cimg/go:1.17
@@ -130,7 +129,7 @@ jobs:
       - persist_to_workspace:
           root: ~/artifacts
           paths:
-            - '*.bin'
+            - "*.bin"
 
   darwin-arm64:
     docker:
@@ -152,7 +151,7 @@ jobs:
       - persist_to_workspace:
           root: ~/artifacts
           paths:
-            - '*.bin'
+            - "*.bin"
 
   linux-amd64:
     docker:
@@ -196,8 +195,8 @@ jobs:
       - persist_to_workspace:
           root: ~/artifacts
           paths:
-            - '*.bin'
-            
+            - "*.bin"
+
   linux-arm64:
     docker:
       - image: cimg/go:1.17
@@ -218,10 +217,10 @@ jobs:
       - persist_to_workspace:
           root: ~/artifacts
           paths:
-            - '*.bin'
+            - "*.bin"
 
   linux-amd64-apline:
-    working_directory: /go/src/github.com/nsmithuk/local-kms
+    working_directory: /go/src/github.com/mnPanicMeli/local-kms
     docker:
       - image: golang:1.17-alpine
     steps:
@@ -267,7 +266,7 @@ jobs:
       - persist_to_workspace:
           root: /artifacts
           paths:
-            - '*.bin'
+            - "*.bin"
 
   docker-image-build:
     machine:
@@ -382,9 +381,9 @@ jobs:
             export VERSION_MAJOR=`echo << pipeline.git.tag >> | awk -F '.' '{print $1}'`
             echo "Version Full << pipeline.git.tag >>"
             echo "Version Major $VERSION_MAJOR"
-            
+
             ./regctl image copy nsmithuk/local-kms:circleci nsmithuk/local-kms:${VERSION_MAJOR}            
-            ./regctl image copy nsmithuk/local-kms:circleci nsmithuk/local-kms:<< pipeline.git.tag >>            
+            ./regctl image copy nsmithuk/local-kms:circleci nsmithuk/local-kms:<< pipeline.git.tag >>
 
   release-artifacts-s3:
     executor: aws-cli/default
@@ -412,15 +411,15 @@ jobs:
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/${VERSION_MAJOR}/local-kms_${ARCH}.bin
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/<< pipeline.git.tag >>/local-kms_${ARCH}.bin
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/localstack/v${VERSION_MAJOR}/local-kms.linux.bin
-            
+
             export ARCH=linux-arm64
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/${VERSION_MAJOR}/local-kms_${ARCH}.bin
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/<< pipeline.git.tag >>/local-kms_${ARCH}.bin
-            
+
             # ARM64 Apline don't not need its own special build, so we can use linux-arm64
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/${VERSION_MAJOR}/local-kms_${ARCH}-alpine.bin
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/<< pipeline.git.tag >>/local-kms_${ARCH}-alpine.bin
-            
+
             export ARCH=linux-amd64-alpine
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/${VERSION_MAJOR}/local-kms_${ARCH}.bin
             aws s3 cp ~/artifacts/$ARCH.bin s3://local-kms/<< pipeline.git.tag >>/local-kms_${ARCH}.bin

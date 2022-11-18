@@ -254,7 +254,7 @@ When successfully calling `ScheduleKeyDeletion`, the timestamp returned from AWS
 For example `1.5565824E9`. The same request to Local KMS will return `1556582400`. This should have no effect on
 official AWS SDKs, as from a JSON interpreter's perspective the two are identical. It does however seem difficult to
 force Go to return the value in Standard Form.
-See: https://github.com/nsmithuk/local-kms/issues/4
+See: https://github.com/mnPanicMeli/local-kms/issues/4
 
 ## Building from source
 
@@ -265,8 +265,8 @@ Tested with Go 1.17
 ### Install
 
 ```sh
-go get -u github.com/nsmithuk/local-kms
-cd $GOPATH/src/github.com/nsmithuk/local-kms
+go get -u github.com/mnPanicMeli/local-kms
+cd $GOPATH/src/github.com/mnPanicMeli/local-kms
 go install
 ```
 

@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
-      - .:/go/src/github.com/nsmithuk/local-kms
+      - .:/go/src/github.com/mnPanicMeli/local-kms
       - ./init:/init
       - ./data:/data
     ports:
